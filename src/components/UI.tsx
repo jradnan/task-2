@@ -1,11 +1,10 @@
-import { formData } from "../App";
+import { formData } from "./Form";
 
-const UI = (data) => {
-  console.log(data.data);
+const UI = ({data}) => {
   return (
     <div >
         <h1>Data Table</h1>
-      {data.data.map((item: formData) => (
+      {data.map((item: formData) => (
         <div key={item.id}>
           <h1>Name:{item.name}</h1>
           <p>Email:{item.email}</p>
